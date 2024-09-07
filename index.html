@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>InSync Creations</title>
     <style>
+      body {
+        overflow-x: hidden;
+      }
       #hero {
         padding: 0px 0;
+        height: 680px;
+      }
+      #hero > div > div > div > h1 {
+        font-size: 96px;
+      }
+      #hero > div > div > div > h3 {
+        font-size: 64px;
       }
 
       .icon-linkedin {
@@ -26,6 +36,17 @@
         -webkit-text-fill-color: transparent; /* Rende il testo trasparente per mostrare il gradiente */
         background-clip: text; /* Supporto per Firefox */
         color: transparent; /* Assicura che il colore del testo sia trasparente */
+      }
+      @media only screen and (max-width: 600px) {
+        #hero {
+          height: 205px;
+        }
+        #hero > div > div > div > h1 {
+          font-size: 24px;
+        }
+        #hero > div > div > div > h3 {
+          font-size: 14px;
+        }
       }
     </style>
     <link
@@ -101,6 +122,7 @@
         background: url('./assets/hero.png') no-repeat center center;
         background-size: cover;
       "
+      class="d-flex align-items-center justify-content-center"
     >
       <div class="container text-start">
         <div class="row my-5 py-3">
