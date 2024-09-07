@@ -37,15 +37,28 @@
         background-clip: text; /* Supporto per Firefox */
         color: transparent; /* Assicura che il colore del testo sia trasparente */
       }
+
+      #services > footer > div:nth-child(2) > div > div > h1 {
+        font-size: 200px;
+      }
+      #services > footer > div:nth-child(1) > div > div > h1 {
+        font-size: 200px;
+      }
       @media only screen and (max-width: 600px) {
         #hero {
-          height: 600px;
+          height: 450px;
         }
         #hero > div > div > div > h1 {
-          font-size: 35px;
+          font-size: 60px;
         }
         #hero > div > div > div > h3 {
-          font-size: 25px;
+          font-size: 40px;
+        }
+        #services > footer > div:nth-child(2) > div > div > h1 {
+          font-size: 100px;
+        }
+        #services > footer > div:nth-child(1) > div > div > h1 {
+          font-size: 100px;
         }
       }
     </style>
@@ -411,22 +424,20 @@
       </section>
       <!-- footer -->
       <footer
-        style="
-          background-color: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
-        "
+        style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%)"
         class="mt-5"
       >
         <div class="row">
           <div class="container-flex">
             <div class="col-7">
-              <h1 class="display-1 fw-bold ms-5">INSYNC</h1>
+              <h1 class="display-1 fw-bold text-light ms-5">INSYNC</h1>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="container-flex">
             <div class="col-12">
-              <h1 class="display-1 fw-bold ms-5">CREATIONS</h1>
+              <h1 class="display-1 text-light fw-bold ms-5">CREATIONS</h1>
             </div>
           </div>
         </div>
