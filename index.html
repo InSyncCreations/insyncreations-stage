@@ -7,7 +7,18 @@
     <style>
       /* Generale */
 
-      
+      .gradient-text {
+        background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
+        -webkit-background-clip: text; /* Per Chrome e Safari */
+        color: transparent; /* Rende il colore di base trasparente */
+    }
+
+    .gradient-hr {
+      border: none; /* Rimuove il bordo di default */
+      height: 1px; /* Altezza della linea */
+      background: linear-gradient(to right, #b261d7 0%, #5d3371 100%); /* Colore di sfondo gradiente */
+      margin: 20px 0; /* Margini sopra e sotto l'hr */
+  }
       body {
         overflow-x: hidden;
       }
@@ -132,7 +143,7 @@
   <body>
     
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-black bg-light">
+    <nav  class="navbar navbar-expand-lg navbar-black bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./assets/insync-logo.png" alt="Logo" class="logo" />
@@ -202,8 +213,8 @@
     <!-- Design Section -->
     <div class="row mt-5">
       <div class="col-md-7 mb-4">
-        <h2 data-aos="fade-down" data-aos-duration="1800" class="display-2">Design</h2>
-        <ul data-aos="zoom-in-down" data-aos-duration="1800" class="list-group list-group-flush">
+        <h2 data-aos="fade-left" data-aos-duration="1800" class="display-2">Design</h2>
+        <ul data-aos="fade-up" data-aos-duration="1800" class="list-group list-group-flush">
           <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#uxuiModal">
             UX/UI
             <span class="ml-3">+</span>
@@ -225,9 +236,7 @@
     </div>
 
   <!-- Carosello per i loghi di Design -->
-<div data-aos="fade-down"
-
-data-aos-duration="1500" class="row mb-4">
+<div data-aos="fade-up" data-aos-duration="1500" class="row mb-4">
   <div class="col-md-12">
     <h4 class="text-center">Design stack</h4>
     <div id="logosCarouselDesign" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -261,15 +270,14 @@ data-aos-duration="1500" class="row mb-4">
     </div>
   </div>
 </div>
+
+<hr  class="gradient-hr" />
+
     <!-- Development Section -->
     <div class="row mt-5">
       <div class="col-md-7 mb-4">
-        <h2 data-aos="fade-down"
-
-        data-aos-duration="1500" class="display-4">Development</h2>
-        <ul data-aos="zoom-in-down"
-
-        data-aos-duration="1500" class="list-group list-group-flush">
+        <h2  data-aos="fade-right" data-aos-duration="1500" class="display-4">Development</h2>
+        <ul data-aos="fade-up" data-aos-duration="1500" class="list-group list-group-flush">
           <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#webDevModal">
             Web Development
             <span class="ml-3">+</span>
@@ -289,10 +297,8 @@ data-aos-duration="1500" class="row mb-4">
         </ul>
       </div>
     </div>
-     <!-- Carosello per i loghi di Design -->
-<div data-aos="fade-down"
-
-data-aos-duration="1500" class="row mb-4">
+     <!-- Carosello per i loghi di Dev -->
+<div data-aos="fade-up" data-aos-duration="1500" class="row mb-4">
   <div class="col-md-12">
     <h4 class="text-center">Development stack</h4>
     <div id="logosCarouselDesign" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -385,27 +391,27 @@ data-aos-duration="1500" class="row mb-4">
     <div class="row align-items-center">
       <!-- Colonna di testo -->
       <div class="col-12 col-md-7 text-center text-md-start mb-4 mb-md-0">
-        <h2 class="display-4 m-3">Simone Arena</h2>
+        <h2  data-aos="fade-left" data-aos-duration="1500" class="display-4 m-3">Simone Arena</h2>
         <p class="lead m-3">
           Con una laurea in Arti Tecnologiche conseguita presso l'Accademia di Belle Arti di Catania, Arena Simone è un creativo e sviluppatore con una passione per l'innovazione digitale. Ha realizzato numerosi progetti di design, tra cui la creazione di identità visive per start-up emergenti e il rebranding di aziende consolidate. La sua competenza nello sviluppo di siti web e web app lo ha portato a collaborare con clienti in vari settori, trasformando idee in soluzioni digitali efficaci e all'avanguardia.
         </p>
       </div>
       <!-- Colonna immagine e icone social -->
       <div class="col-12 col-md-5 text-center text-md-end">
-        <img
+        <img  data-aos="fade-right" data-aos-duration="1500"
           src="./assets/simo.png"
           class="img-fluid rounded-circle mb-3"
           alt="Simone Arena - sviluppatore e creativo"
           style="max-width: 150px"
         />
         <div class="d-flex justify-content-center justify-content-md-end">
-          <a href="https://www.linkedin.com/in/simonearena" class="text-white me-3" aria-label="LinkedIn di Simone Arena">
+          <a data-aos="fade-up" data-aos-duration="1500" href="https://www.linkedin.com/in/simonearena" class="text-white me-3" aria-label="LinkedIn di Simone Arena">
             <i class="bi bi-linkedin fa-2x"></i>
           </a>
-          <a href="mailto:simone@example.com" class="text-white me-3" aria-label="Email a Simone Arena">
+          <a data-aos="fade-up" data-aos-duration="1500" href="mailto:simone@example.com" class="text-white me-3" aria-label="Email a Simone Arena">
             <i class="bi bi-envelope fa-2x"></i>
           </a>
-          <a href="tel:+123456789" class="text-white" aria-label="Chiama Simone Arena">
+          <a data-aos="fade-up" data-aos-duration="1500" href="tel:+123456789" class="text-white" aria-label="Chiama Simone Arena">
             <i class="bi bi-telephone fa-2x"></i>
           </a>
         </div>
@@ -419,28 +425,28 @@ data-aos-duration="1500" class="row mb-4">
   <div class="container-fluid bg-light text-dark py-5">
     <div class="row align-items-center">
       <!-- Colonna immagine e icone social -->
-      <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0">
-        <img
+      <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0 ms-auto ">
+        <img data-aos="fade-right " data-aos-duration="1500"
           src="./assets/rr.png"
           class="img-fluid rounded-circle mb-3"
           alt="Roberto Russo - sviluppatore web e cloud architect"
           style="max-width: 150px"
         />
         <div class="d-flex justify-content-center justify-content-md-start">
-          <a href="https://www.linkedin.com/in/robertorusso" class="text-dark me-3" aria-label="LinkedIn di Roberto Russo">
+          <a data-aos="fade-up" data-aos-duration="1500" href="https://www.linkedin.com/in/robertorusso" class="text-dark me-3" aria-label="LinkedIn di Roberto Russo">
             <i class="bi bi-linkedin fa-2x icon-linkedin"></i>
           </a>
-          <a href="mailto:roberto@example.com" class="text-dark me-3" aria-label="Email a Roberto Russo">
+          <a data-aos="fade-up" data-aos-duration="1500" href="mailto:roberto@example.com" class="text-dark me-3" aria-label="Email a Roberto Russo">
             <i class="bi bi-envelope fa-2x icon-envelope"></i>
           </a>
-          <a href="tel:+123456789" class="text-dark" aria-label="Chiama Roberto Russo">
+          <a data-aos="fade-up" data-aos-duration="1500" href="tel:+123456789" class="text-dark" aria-label="Chiama Roberto Russo">
             <i class="bi bi-telephone fa-2x icon-telephone"></i>
           </a>
         </div>
       </div>
       <!-- Colonna di testo -->
       <div class="col-12 col-md-7 text-center text-md-end">
-        <h2 class="display-4 m-3">Russo Roberto</h2>
+        <h2 data-aos="fade-left" data-aos-duration="1500" class="display-4 m-3">Russo Roberto</h2>
         <p class="lead m-3">
           Sviluppatore web con un'esperienza consolidata nella creazione di siti web di vario genere, dalle piattaforme e-commerce a complesse web app aziendali. La sua passione per il cloud computing lo ha portato a ottenere certificazioni AWS, affermandosi come Cloud Architect presso The Wave Studio. Attualmente è laureando in Ingegneria Informatica presso l'Università di Catania, continuando a espandere le sue competenze sia nello sviluppo web che nelle soluzioni cloud, con un approccio innovativo e orientato alla scalabilità.
         </p>
@@ -449,14 +455,14 @@ data-aos-duration="1500" class="row mb-4">
   </div>
 </section>
 
-<hr class="hr" />
+<hr data-aos="fade-down" data-aos-duration="1500" class="hr gradient-hr" />
 <!-- contatti -->
 <section id="contatti">
-  <h3 class="display-3 text-lg-end text-end mb-5">/contatti</h3>
+  <h3 data-aos="fade-down" data-aos-duration="1500"  class="display-3 text-lg-end text-end mb-5 gradient-text">/contatti</h3>
   <div class="container">
     <div class="row align-items-start">
       <!-- Testo a sinistra -->
-      <div class="col-lg-7 mb-5">
+      <div data-aos="fade-up" data-aos-duration="1500" class="col-lg-7 mb-5">
         <p class="lead">
           Abbiamo a cuore il tuo progetto e siamo qui per aiutarti! Se hai
           domande sui nostri servizi, vuoi richiedere un preventivo o
@@ -469,17 +475,17 @@ data-aos-duration="1500" class="row mb-4">
       <!-- Icone social e contatti a destra -->
       <div class="col-lg-5 d-flex flex-column align-items-start align-items-lg-center">
         <!-- Email -->
-        <a href="mailto:simone@example.com" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-up" data-aos-duration="1500" href="mailto:simone@example.com" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-envelope fa-2x me-3 text-danger"></i>
           <span class="align-middle">insyncreations@gmail.com</span>
         </a>
         <!-- Numero di telefono 1 -->
-        <a href="tel:+123456789" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-up" data-aos-duration="1500" href="tel:+393515604585" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-telephone fa-2x me-3 text-info"></i>
           <span class="align-middle">+39 351 560 4585</span>
         </a>
         <!-- Numero di telefono 2 -->
-        <a href="tel:+987654321" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-up" data-aos-duration="1500" href="tel:+393284661440" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-telephone fa-2x me-3 text-info"></i>
           <span class="align-middle">+39 328 466 1440</span>
         </a>
@@ -506,7 +512,8 @@ data-aos-duration="1500" class="row mb-4">
       </div>
     </div>
 
-    <hr class="hr" />
+    <hr data-aos="fade-down" data-aos-duration="1500" class="hr gradient-hr" />
+
 
     <!-- Row per le info nel footer -->
     <div class="row">
