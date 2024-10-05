@@ -6,6 +6,8 @@
     <title>InSync Creations</title>
     <style>
       /* Generale */
+
+      
       body {
         overflow-x: hidden;
       }
@@ -123,10 +125,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    
   </head>
   <body>
+    
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-black bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./assets/insync-logo.png" alt="Logo" class="logo" />
@@ -172,140 +178,159 @@
       "
     >
       <div class="container text-center">
-        <h1 class="display-1 gradient-text fw-bold">InSync Creations</h1>
-        <h3 class="display-5 text-white">
-          Innovate Your Digital Presence. We develop cutting-edge web solutions,
-          perfectly in sync with your needs.
+        <h1 data-aos="fade-down" data-aos-duration="1500" class="display-1 gradient-text fw-bold text-start">InSync Creations</h1>
+        <h3 data-aos="fade-down" data-aos-duration="1800" class="display-1 text-white text-start">
+          Innovate Your Digital Presence. We 
+          <span class ="fw-bold" style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%); 
+                -webkit-background-clip: text; 
+                color: transparent;">develop</span> 
+          cutting-edge web solutions, perfectly in 
+          <span class="fw-bold" style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%); 
+                -webkit-background-clip: text; 
+                color: transparent;">sync</span> 
+          with your needs.
         </h3>
       </div>
     </section>
-   <!-- Services -->
-<section id="services">
-  <div class="row">
-    <div class="container text-end">
-      <h3 class="display-2 gradient-text">/servizi</h3>
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 data-aos="fade-down" data-aos-duration="1800" class="display-2 gradient-text text-end">/servizi</h3>
     </div>
-  </div>
 
-  <!-- Design Section -->
-  <div class="row mt-5 pt-5">
-    <div class="container-md d-flex">
-      <div class="col-7 m-2">
-        <h2 class="display-2 m-3">Design</h2>
-        <ul class="list-group list-group-flush">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#uxuiModal"
-          >
+    <!-- Design Section -->
+    <div class="row mt-5">
+      <div class="col-md-7 mb-4">
+        <h2 data-aos="fade-down" data-aos-duration="1800" class="display-2">Design</h2>
+        <ul data-aos="zoom-in-down" data-aos-duration="1800" class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#uxuiModal">
             UX/UI
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#responsiveModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#responsiveModal">
             Responsive Design
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#brandConsistencyModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#brandConsistencyModal">
             Brand Consistency
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#brandCollateralModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#brandCollateralModal">
             Brand Collateral Design
             <span class="ml-3">+</span>
           </li>
         </ul>
       </div>
+    </div>
 
-      <div class="col-5 m-2">
-        <div id="imageCarouselDesign" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 1" />
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 2" />
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 3" />
-            </div>
+  <!-- Carosello per i loghi di Design -->
+<div data-aos="fade-down"
+
+data-aos-duration="1500" class="row mb-4">
+  <div class="col-md-12">
+    <h4 class="text-center">Design stack</h4>
+    <div id="logosCarouselDesign" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 1" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/js.png" class="mx-2" alt="Logo 2" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 4" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/js.png" class="mx-2" alt="Logo 5" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 6" style="width: 80px; height: auto;" />
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+    <!-- Development Section -->
+    <div class="row mt-5">
+      <div class="col-md-7 mb-4">
+        <h2 data-aos="fade-down"
 
-  <!-- Development Section -->
-  <div class="row mt-5 pt-5">
-    <div class="container-md d-flex">
-      <div class="col-7 m-2">
-        <h4 class="display-4 m-3">Development</h4>
-        <ul class="list-group list-group-flush">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#webDevModal"
-          >
+        data-aos-duration="1500" class="display-4">Development</h2>
+        <ul data-aos="zoom-in-down"
+
+        data-aos-duration="1500" class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#webDevModal">
             Web Development
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#cloudModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#cloudModal">
             Cloud Architecture
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#backendModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#backendModal">
             Backend Development
             <span class="ml-3">+</span>
           </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            data-bs-toggle="modal"
-            data-bs-target="#mobileModal"
-          >
+          <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="modal" data-bs-target="#mobileModal">
             Mobile Development
             <span class="ml-3">+</span>
           </li>
         </ul>
       </div>
+    </div>
+     <!-- Carosello per i loghi di Design -->
+<div data-aos="fade-down"
 
-      <div class="col-5 m-2">
-        <div id="imageCarouselDev" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 1" />
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 2" />
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 3" />
-            </div>
+data-aos-duration="1500" class="row mb-4">
+  <div class="col-md-12">
+    <h4 class="text-center">Development stack</h4>
+    <div id="logosCarouselDesign" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 1" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/js.png" class="mx-2" alt="Logo 2" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 4" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/js.png" class="mx-2" alt="Logo 5" style="width: 80px; height: auto;" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="./assets/figma.png" class="mx-2" alt="Logo 6" style="width: 80px; height: auto;" />
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+   
 </section>
 
+<!-- Modali per i Servizi -->
 <!-- UX/UI Modal -->
 <div class="modal fade" id="uxuiModal" tabindex="-1" aria-labelledby="uxuiModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -350,6 +375,8 @@
     </div>
   </div>
 </div>
+
+<!-- Aggiungi qui le altre modali per i vari servizi -->
 
 <!-- Aggiungi qui le altre modali per i vari servizi -->
      <!-- Simone Arena -->
@@ -504,5 +531,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
