@@ -5,20 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>InSync Creations</title>
     <style>
+      /* Generale */
       body {
         overflow-x: hidden;
       }
-      #hero {
-        padding: 0px 0;
-        height: 680px;
+
+      @media (min-width: 1200px) {
+        body > footer > div > div > div.col-12.col-md-8.d-flex.align-items-center > img{
+          min-width: 200px;
+        }
+    }
+
+      .footer-title {
+        font-size: 12rem; /* Cambia questo valore per aumentare/diminuire la dimensione */
+    }
+
+    @media (max-width: 650px) {
+      .footer-title {
+          font-size: 14vw; /* Adatta la dimensione per dispositivi più piccoli */
       }
-      #hero > div > div > div > h1 {
-        font-size: 96px;
-      }
-      #hero > div > div > div > h3 {
-        font-size: 64px;
+  }
+      /* Navbar */
+      .navbar {
+        padding: 1rem 2rem;
       }
 
+      .navbar-dark .navbar-nav .nav-link {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      /* Hero Section */
+      #hero {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+
+      #hero h1 {
+        font-size: 6rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      #hero h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Gradient Text */
+      .gradient-text {
+        background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Responsività */
+      @media (max-width: 768px) {
+        #hero h1 {
+          font-size: 3rem;
+        }
+        #hero h3 {
+          font-size: 1.5rem;
+        }
+        .navbar-brand {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        #hero {
+          height: 375px;
+        }
+        #hero h1 {
+          font-size: 40px;
+        }
+        #hero h3 {
+          font-size: 30px;
+        }
+      }
+
+      /* Icon Colors */
       .icon-linkedin {
         color: #0077b5; /* Colore del LinkedIn */
       }
@@ -30,47 +103,10 @@
       .icon-telephone {
         color: #34b7f1; /* Colore del telefono */
       }
-      .gradient-text {
-        background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-      }
 
-      #services > footer > div:nth-child(2) > div > div > h1 {
-        font-size: 200px;
-      }
-      #services > footer > div:nth-child(1) > div > div > h1 {
-        font-size: 200px;
-      }
+      /* Logo Navbar */
       .navbar-brand .logo {
         height: 40px;
-        margin-left: 20px;
-      }
-      @media only screen and (max-width: 600px) {
-        .navbar-brand {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          margin-left: 0;
-        }
-
-        #hero {
-          height: 375px;
-        }
-        #hero > div > div > div > h1 {
-          font-size: 40px;
-        }
-        #hero > div > div > div > h3 {
-          font-size: 30px;
-        }
-        #services > footer > div:nth-child(2) > div > div > h1 {
-          font-size: 100px;
-        }
-        #services > footer > div:nth-child(1) > div > div > h1 {
-          font-size: 100px;
-        }
       }
     </style>
     <link
@@ -90,7 +126,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./assets/insync-logo.png" alt="Logo" class="logo" />
@@ -98,378 +134,363 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+              <a class="nav-link" href="#">Servizi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="#">Chi Siamo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contatti</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- Hero section-->
+
+    <!-- Hero Section -->
     <section
       id="hero"
+      class="d-flex align-items-center justify-content-center"
       style="
         background: url('./assets/hero.png') no-repeat center center;
         background-size: cover;
+        height: 100vh;
       "
-      class="d-flex align-items-center justify-content-center"
     >
-      <div class="container text-start">
-        <div class="row my-5 py-3">
-          <!-- Colonna per il titolo e il sottotitolo -->
-          <div class="col-12">
-            <h1 class="display-1 mb-4 gradient-text fw-bold">
-              InSync Creations
-            </h1>
-            <h3 class="display-4 mb-4 text-white">
-              Innovate Your Digital Presence. We develop cutting-edge web
-              solutions, perfectly in sync with your needs.
-            </h3>
-          </div>
-        </div>
+      <div class="container text-center">
+        <h1 class="display-1 gradient-text fw-bold">InSync Creations</h1>
+        <h3 class="display-5 text-white">
+          Innovate Your Digital Presence. We develop cutting-edge web solutions,
+          perfectly in sync with your needs.
+        </h3>
       </div>
     </section>
-    <!-- Services -->
-    <section id="services">
-      <div class="row">
-        <div class="container text-end">
-          <h3 class="display-2 gradient-text">/servizi</h3>
-        </div>
-      </div>
-      <!-- design-->
-      <div class="row mt-5 pt-5">
-        <div class="container-md d-flex">
-          <div class="col-7 m-2">
-            <h2 class="display-2 m-3">Design</h2>
-            <ul class="list-group list-group-flush">
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                UX/UI
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Responsive Design
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Brand Consistency
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Brand Collateral Design
-                <span class="ml-3">+</span>
-              </li>
-            </ul>
-          </div>
+   <!-- Services -->
+<section id="services">
+  <div class="row">
+    <div class="container text-end">
+      <h3 class="display-2 gradient-text">/servizi</h3>
+    </div>
+  </div>
 
-          <div class="col-5 m-2">
-            <div
-              id="imageCarousel"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./assets/figma.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 1"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/figma.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 2"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/figma.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 3"
-                  />
-                </div>
-              </div>
+  <!-- Design Section -->
+  <div class="row mt-5 pt-5">
+    <div class="container-md d-flex">
+      <div class="col-7 m-2">
+        <h2 class="display-2 m-3">Design</h2>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#uxuiModal"
+          >
+            UX/UI
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#responsiveModal"
+          >
+            Responsive Design
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#brandConsistencyModal"
+          >
+            Brand Consistency
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#brandCollateralModal"
+          >
+            Brand Collateral Design
+            <span class="ml-3">+</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-5 m-2">
+        <div id="imageCarouselDesign" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/figma.png" class="d-block w-70 mx-auto" alt="Design Image 3" />
             </div>
           </div>
         </div>
       </div>
-      <!-- development -->
-      <div class="row mt-5 pt-5">
-        <div class="container-md d-flex">
-          <div class="col-7 m-2">
-            <h4 class="display-4 m-3">Development</h4>
-            <ul class="list-group list-group-flush">
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Web Development
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                RCloud Architecture
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Backend Development
-                <span class="ml-3">+</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center"
-              >
-                Mobile Development
-                <span class="ml-3">+</span>
-              </li>
-            </ul>
-          </div>
+    </div>
+  </div>
 
-          <div class="col-5 m-2">
-            <div
-              id="imageCarousel"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./assets/js.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 1"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/js.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 2"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/js.png"
-                    class="d-block w-70 mx-auto"
-                    alt="Image 3"
-                  />
-                </div>
-              </div>
+  <!-- Development Section -->
+  <div class="row mt-5 pt-5">
+    <div class="container-md d-flex">
+      <div class="col-7 m-2">
+        <h4 class="display-4 m-3">Development</h4>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#webDevModal"
+          >
+            Web Development
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#cloudModal"
+          >
+            Cloud Architecture
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#backendModal"
+          >
+            Backend Development
+            <span class="ml-3">+</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal"
+            data-bs-target="#mobileModal"
+          >
+            Mobile Development
+            <span class="ml-3">+</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-5 m-2">
+        <div id="imageCarouselDev" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/js.png" class="d-block w-70 mx-auto" alt="Development Image 3" />
             </div>
           </div>
         </div>
       </div>
-      <!-- simone -->
-      <section id="simone">
-        <div class="container-fluid bg-dark text-white py-5">
-          <div class="row align-items-center">
-            <!-- Colonna di testo -->
-            <div class="col-12 col-md-7 text-center text-md-start mb-4 mb-md-0">
-              <h2 class="display-4 m-3">Simone Arena</h2>
-              <p class="lead m-3">
-                Con una laurea in Arti Tecnologiche conseguita presso
-                l'Accademia di Belle Arti di Catania, Arena Simone è un creativo
-                e sviluppatore con una passione per l'innovazione digitale. Ha
-                realizzato numerosi progetti di design, tra cui la creazione di
-                identità visive per start-up emergenti e il rebranding di
-                aziende consolidate. La sua competenza nello sviluppo di siti
-                web e web app lo ha portato a collaborare con clienti in vari
-                settori, trasformando idee in soluzioni digitali efficaci e
-                all'avanguardia.
-              </p>
-            </div>
-            <!-- Colonna immagine e icone social -->
-            <div class="col-12 col-md-5 text-center text-md-end">
-              <img
-                src="./assets/simo.png"
-                class="img-fluid rounded-circle mb-3"
-                alt="Simone Arena"
-                style="max-width: 150px"
-              />
-              <div class="d-flex justify-content-center justify-content-md-end">
-                <a
-                  href="https://www.linkedin.com/in/simonearena"
-                  class="text-white me-3"
-                >
-                  <i class="bi bi-linkedin fa-2x"></i>
-                </a>
-                <a href="mailto:simone@example.com" class="text-white me-3">
-                  <i class="bi bi-envelope fa-2x"></i>
-                </a>
-                <a href="tel:+123456789" class="text-white">
-                  <i class="bi bi-telephone fa-2x"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- roberto -->
-      <section id="roberto">
-        <div class="container-fluid text-dark py-5">
-          <div class="row align-items-center">
-            <!-- Colonna immagine e icone social -->
-            <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0">
-              <img
-                src="/assets/rr.png"
-                class="img-fluid rounded-circle mb-3"
-                alt="Simone Arena"
-                style="max-width: 150px"
-              />
-              <div
-                class="d-flex justify-content-center justify-content-md-start"
-              >
-                <a
-                  href="https://www.linkedin.com/in/simonearena"
-                  class="text-white me-3"
-                >
-                  <i class="bi bi-linkedin fa-2x icon-linkedin"></i>
-                </a>
-                <a href="mailto:simone@example.com" class="text-white me-3">
-                  <i class="bi bi-envelope fa-2x icon-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="text-white">
-                  <i class="bi bi-telephone fa-2x icon-telephone"></i>
-                </a>
-              </div>
-            </div>
-            <!-- Colonna di testo -->
-            <div class="col-12 col-md-7 text-center text-md-start">
-              <h2 class="display-4 m-3">Russo Roberto</h2>
-              <p class="lead m-3">
-                è uno sviluppatore web con un'esperienza consolidata nella
-                creazione di siti web di vario genere, dalle piattaforme
-                e-commerce a complesse web app aziendali. La sua passione per il
-                cloud computing lo ha portato a ottenere certificazioni AWS,
-                affermandosi come un Cloud Architect presso The Wave Studio.
-                Attualmente è laureando in Ingegneria Informatica presso
-                l'Università di Catania, continuando a espandere le sue
-                competenze sia nello sviluppo web che nelle soluzioni cloud, con
-                un approccio innovativo e orientato alla scalabilità.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="hr" />
-      <!-- contatti -->
-      <section id="contatti">
-        <h3 class="display-3 text-lg-end text-end mb-5">/contatti</h3>
-        <div class="container">
-          <div class="row align-items-start">
-            <!-- Testo a sinistra -->
-            <div class="col-lg-7 mb-5">
-              <p class="lead">
-                Abbiamo a cuore il tuo progetto e siamo qui per aiutarti! Se hai
-                domande sui nostri servizi, vuoi richiedere un preventivo o
-                semplicemente desideri discutere delle tue idee, non esitare a
-                metterti in contatto con noi. Il nostro team è pronto ad
-                ascoltarti e a offrirti supporto personalizzato.
-              </p>
-            </div>
+    </div>
+  </div>
+</section>
 
-            <!-- Icone social a destra -->
-            <div
-              class="col-lg-5 d-flex flex-column align-items-start align-items-lg-center"
-            >
-              <a
-                href="mailto:simone@example.com"
-                class="d-flex align-items-center text-decoration-none text-dark mb-3"
-              >
-                <i class="bi bi-envelope fa-2x me-2 text-danger"></i>
-                <span>Mail</span>
-              </a>
-              <a
-                href="tel:+123456789"
-                class="d-flex align-items-center text-decoration-none text-dark"
-              >
-                <i class="bi bi-telephone fa-2x me-2 text-info"></i>
-                <span>Tel</span>
-              </a>
-            </div>
-          </div>
+<!-- UX/UI Modal -->
+<div class="modal fade" id="uxuiModal" tabindex="-1" aria-labelledby="uxuiModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="uxuiModalLabel">UX/UI Design</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Offriamo un'esperienza utente ottimale e un'interfaccia intuitiva per i tuoi progetti.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Responsive Design Modal -->
+<div class="modal fade" id="responsiveModal" tabindex="-1" aria-labelledby="responsiveModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="responsiveModalLabel">Responsive Design</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Garantiamo che i tuoi siti siano perfettamente visibili su ogni dispositivo.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Web Development Modal -->
+<div class="modal fade" id="webDevModal" tabindex="-1" aria-labelledby="webDevModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="webDevModalLabel">Web Development</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Costruiamo siti web efficienti e scalabili per il tuo business.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Aggiungi qui le altre modali per i vari servizi -->
+     <!-- Simone Arena -->
+<section id="simone">
+  <div class="container-fluid bg-dark text-white py-5">
+    <div class="row align-items-center">
+      <!-- Colonna di testo -->
+      <div class="col-12 col-md-7 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="display-4 m-3">Simone Arena</h2>
+        <p class="lead m-3">
+          Con una laurea in Arti Tecnologiche conseguita presso l'Accademia di Belle Arti di Catania, Arena Simone è un creativo e sviluppatore con una passione per l'innovazione digitale. Ha realizzato numerosi progetti di design, tra cui la creazione di identità visive per start-up emergenti e il rebranding di aziende consolidate. La sua competenza nello sviluppo di siti web e web app lo ha portato a collaborare con clienti in vari settori, trasformando idee in soluzioni digitali efficaci e all'avanguardia.
+        </p>
+      </div>
+      <!-- Colonna immagine e icone social -->
+      <div class="col-12 col-md-5 text-center text-md-end">
+        <img
+          src="./assets/simo.png"
+          class="img-fluid rounded-circle mb-3"
+          alt="Simone Arena - sviluppatore e creativo"
+          style="max-width: 150px"
+        />
+        <div class="d-flex justify-content-center justify-content-md-end">
+          <a href="https://www.linkedin.com/in/simonearena" class="text-white me-3" aria-label="LinkedIn di Simone Arena">
+            <i class="bi bi-linkedin fa-2x"></i>
+          </a>
+          <a href="mailto:simone@example.com" class="text-white me-3" aria-label="Email a Simone Arena">
+            <i class="bi bi-envelope fa-2x"></i>
+          </a>
+          <a href="tel:+123456789" class="text-white" aria-label="Chiama Simone Arena">
+            <i class="bi bi-telephone fa-2x"></i>
+          </a>
         </div>
-      </section>
-      <!-- footer -->
-      <footer
-        style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%)"
-        class="mt-5"
-      >
-        <div class="row">
-          <div class="container-flex">
-            <div class="col-7">
-              <h1 class="display-1 fw-bold text-light ms-5">INSYNC</h1>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roberto Russo -->
+<section id="roberto">
+  <div class="container-fluid bg-light text-dark py-5">
+    <div class="row align-items-center">
+      <!-- Colonna immagine e icone social -->
+      <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0">
+        <img
+          src="/assets/rr.png"
+          class="img-fluid rounded-circle mb-3"
+          alt="Roberto Russo - sviluppatore web e cloud architect"
+          style="max-width: 150px"
+        />
+        <div class="d-flex justify-content-center justify-content-md-start">
+          <a href="https://www.linkedin.com/in/robertorusso" class="text-dark me-3" aria-label="LinkedIn di Roberto Russo">
+            <i class="bi bi-linkedin fa-2x icon-linkedin"></i>
+          </a>
+          <a href="mailto:roberto@example.com" class="text-dark me-3" aria-label="Email a Roberto Russo">
+            <i class="bi bi-envelope fa-2x icon-envelope"></i>
+          </a>
+          <a href="tel:+123456789" class="text-dark" aria-label="Chiama Roberto Russo">
+            <i class="bi bi-telephone fa-2x icon-telephone"></i>
+          </a>
         </div>
-        <div class="row">
-          <div class="container-flex">
-            <div class="col-12">
-              <h1 class="display-1 text-light fw-bold ms-5">CREATIONS</h1>
-            </div>
-          </div>
-        </div>
-        <hr class="hr" />
-        <div class="container">
-          <div class="row">
-            <!-- Colonna per contenere i paragrafi -->
-            <div
-              class="col-12 d-flex justify-content-between align-items-center flex-wrap"
-            >
-              <p class="mb-0">© 2024 InSync Creations</p>
-              <p class="mb-0 text-center">Privacy & Cookie Policy</p>
-              <p class="mb-0 text-end">insyncreations@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+      <!-- Colonna di testo -->
+      <div class="col-12 col-md-7 text-center text-md-end">
+        <h2 class="display-4 m-3">Russo Roberto</h2>
+        <p class="lead m-3">
+          Sviluppatore web con un'esperienza consolidata nella creazione di siti web di vario genere, dalle piattaforme e-commerce a complesse web app aziendali. La sua passione per il cloud computing lo ha portato a ottenere certificazioni AWS, affermandosi come Cloud Architect presso The Wave Studio. Attualmente è laureando in Ingegneria Informatica presso l'Università di Catania, continuando a espandere le sue competenze sia nello sviluppo web che nelle soluzioni cloud, con un approccio innovativo e orientato alla scalabilità.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr" />
+<!-- contatti -->
+<section id="contatti">
+  <h3 class="display-3 text-lg-end text-end mb-5">/contatti</h3>
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Testo a sinistra -->
+      <div class="col-lg-7 mb-5">
+        <p class="lead">
+          Abbiamo a cuore il tuo progetto e siamo qui per aiutarti! Se hai
+          domande sui nostri servizi, vuoi richiedere un preventivo o
+          semplicemente desideri discutere delle tue idee, non esitare a
+          metterti in contatto con noi. Il nostro team è pronto ad ascoltarti e
+          a offrirti supporto personalizzato.
+        </p>
+      </div>
+
+      <!-- Icone social e contatti a destra -->
+      <div class="col-lg-5 d-flex flex-column align-items-start align-items-lg-center">
+        <!-- Email -->
+        <a href="mailto:simone@example.com" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+          <i class="bi bi-envelope fa-2x me-3 text-danger"></i>
+          <span class="align-middle">insyncreations@gmail.com</span>
+        </a>
+        <!-- Numero di telefono 1 -->
+        <a href="tel:+123456789" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+          <i class="bi bi-telephone fa-2x me-3 text-info"></i>
+          <span class="align-middle">+39 351 560 4585</span>
+        </a>
+        <!-- Numero di telefono 2 -->
+        <a href="tel:+987654321" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+          <i class="bi bi-telephone fa-2x me-3 text-info"></i>
+          <span class="align-middle">+39 328 466 1440</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+<footer style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);" class="mt-5 py-4">
+  <div class="container">
+    <!-- Row per INSYNC e logo -->
+    <div class="row align-items-center">
+      <div class="col-12 col-md-8 d-flex align-items-center">
+        <h1 class="footer-title fw-bold text-light mb-0 me-2">INSYNC</h1>
+        <img src="./assets/logo_white.png" alt="InSync Logo" class="img-fluid logo-desktop" style="max-width: 120px; height: auto; margin-left: 15px;">      <div class="col-12 col-md-4 text-center">
+        <!-- Vuoto per allineamento -->
+      </div>
+    </div>
+
+    <!-- Row per CREATIONS -->
+    <div class="row">
+      <div class="col-12">
+        <h1 class="footer-title fw-bold text-light">CREATIONS</h1>
+      </div>
+    </div>
+
+    <hr class="hr" />
+
+    <!-- Row per le info nel footer -->
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+        <p class="mb-0 text-light">© 2024 InSync Creations</p>
+        <p class="mb-0 text-light text-center">Privacy Policy | Cookie Policy</p>
+        <p class="mb-0 text-light text-end">insyncreations@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
       <!-- Font Awesome (per le icone) -->
 
