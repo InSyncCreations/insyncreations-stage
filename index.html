@@ -7,6 +7,18 @@
     <style>
       /* Generale */
 
+      .nav-link {
+        position: relative;
+        display: inline-block; /* Permette di impostare padding e margini */
+        padding: 10px 20px; /* Aggiusta la spaziatura interna */
+        border-radius: 50px; /* Bordo arrotondato per creare un effetto ovale */
+        transition: background-color 0.3s; /* Transizione per l'effetto hover */
+    }
+    
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Cambia colore al passaggio del mouse */
+    }
+
       .gradient-text {
         background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
         -webkit-background-clip: text; /* Per Chrome e Safari */
@@ -156,41 +168,31 @@
   </head>
   <body>
     
-    <!-- navbar -->
-    <nav  class="navbar navbar-expand-lg navbar-black bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/insync-logo.png" alt="Logo" class="logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servizi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Chi Siamo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contatti</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="nav">
+      <img src="./assets/logo_for_black.png" alt="Logo" style="width: 150px; height: 50px; object-fit:cover;"> <!-- Aggiungi qui l'immagine del logo -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link oval" href="#pagina1">home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link oval" href="#pagina2">servizi</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link oval" href="#pagina3">chi siamo</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link oval" href="#pagina4">contatti</a>
+          </li>
+      </ul>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <section
@@ -472,7 +474,7 @@
 <hr data-aos="fade-down" data-aos-duration="1500" class="hr gradient-hr" />
 <!-- contatti -->
 <section id="contatti">
-  <h3 data-aos="fade-down" data-aos-duration="1500"  class="display-3 text-lg-end text-end mb-5 gradient-text">/contatti</h3>
+  <h3 data-aos="fade-down" data-aos-duration="1500" class="display-3 text-lg-end text-end mb-5 gradient-text">/contatti</h3>
   <div class="container">
     <div class="row align-items-start">
       <!-- Testo a sinistra -->
@@ -489,17 +491,17 @@
       <!-- Icone social e contatti a destra -->
       <div class="col-lg-5 d-flex flex-column align-items-start align-items-lg-center">
         <!-- Email -->
-        <a data-aos="fade-up" data-aos-duration="1500" href="mailto:simone@example.com" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-right" data-aos-duration="1500" href="mailto:simone@example.com" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-envelope fa-2x me-3 text-danger"></i>
           <span class="align-middle">insyncreations@gmail.com</span>
         </a>
         <!-- Numero di telefono 1 -->
-        <a data-aos="fade-up" data-aos-duration="1500" href="tel:+393515604585" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-right" data-aos-duration="1500" href="tel:+393515604585" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-telephone fa-2x me-3 text-info"></i>
           <span class="align-middle">+39 351 560 4585</span>
         </a>
         <!-- Numero di telefono 2 -->
-        <a data-aos="fade-up" data-aos-duration="1500" href="tel:+393284661440" class="d-flex align-items-center text-decoration-none text-dark mb-3">
+        <a data-aos="fade-right" data-aos-duration="1500" href="tel:+393284661440" class="d-flex align-items-center text-decoration-none text-dark mb-3">
           <i class="bi bi-telephone fa-2x me-3 text-info"></i>
           <span class="align-middle">+39 328 466 1440</span>
         </a>
@@ -511,7 +513,7 @@
 <footer style="background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);" class="mt-5 py-4">
   <div class="container">
     <!-- Row per INSYNC e logo -->
-    <div class="row align-items-center">
+    <div data-aos="fade-up" data-aos-duration="1500" class="row align-items-center">
       <div class="col-12 col-md-8 d-flex align-items-center">
         <h1 class="footer-title fw-bold text-light mb-0 me-2">INSYNC</h1>
         <img src="./assets/logo_white.png" alt="InSync Logo" class="img-fluid logo-desktop" style="max-width: 120px; height: auto; margin-left: 15px;">      <div class="col-12 col-md-4 text-center">
@@ -520,9 +522,9 @@
     </div>
 
     <!-- Row per CREATIONS -->
-    <div class="row">
+    <div data-aos="fade-up" data-aos-duration="1500" class="row">
       <div class="col-12">
-        <h1 class="footer-title fw-bold text-light">CREATIONS</h1>
+        <h1    class="footer-title fw-bold text-light">CREATIONS</h1>
       </div>
     </div>
 
@@ -530,7 +532,7 @@
 
 
     <!-- Row per le info nel footer -->
-    <div class="row">
+    <div  class="row">
       <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
         <p class="mb-0 text-light">© 2024 InSync Creations</p>
         <p class="mb-0 text-light text-center">Privacy Policy | Cookie Policy</p>
@@ -545,6 +547,7 @@
       <!-- Bootstrap JS and dependencies (ensure these are included in your project) -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </section>
     <script
       defer
@@ -552,9 +555,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
