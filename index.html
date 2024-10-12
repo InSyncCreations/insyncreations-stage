@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>InSync Creations</title>
-    <style>
+     <style>
       /* Aggiungi questo CSS per centrare l'immagine */
       .center-container {
         display: flex;
@@ -18,15 +18,18 @@
       .logo_landing {
         max-width: 100%;
         height: auto;
+        /* Aggiunta per limitare la larghezza massima su desktop */
+        max-height: 80vh; /* Limita l'altezza massima dell'immagine per evitare overflow */
       }
-        @media only screen and (max-width: 600px) {
 
-          .logo_landing {
-        width:370px;
-        height:370px;
-        object-fit:cover;
+      @media only screen and (max-width: 600px) {
+        .logo_landing {
+          width: 80%; /* Larghezza del 80% per adattarsi allo schermo */
+          max-width: 370px; /* Limita la larghezza massima */
+          height: auto; /* Mantiene le proporzioni dell'immagine */
+          object-fit: cover; /* Assicura che l'immagine riempia il contenitore */
         }
-        }
+      }
     </style>
   </head>
   <body>
