@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
     <title>InSync Creations</title>
@@ -20,72 +20,69 @@
       /* Aggiungi questo CSS per centrare l'immagine */
       body,
       html {
-        margin: 0; /* Rimuovi il margine di default */
-        padding: 0; /* Rimuovi il padding di default */
-        height: 100%; /* Imposta altezza al 100% per body e html */
-        transition: background-color 0.5s, color 0.5s; /* Transizione per il cambio di modalità */
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        transition: background-color 0.5s, color 0.5s;
       }
 
       .light-mode {
-        background-color: white; /* Colore di sfondo della modalità chiara */
-        color: black; /* Colore del testo della modalità chiara */
+        background-color: white;
+        color: black;
       }
 
       .dark-mode {
-        background-color: #1e1e1e; /* Colore di sfondo della modalità scura */
-        color: white; /* Colore del testo della modalità scura */
+        background-color: #1e1e1e;
+        color: white;
       }
 
       .center-container {
         display: flex;
-        flex-direction: column; /* Cambia in colonna per il bottone */
-        justify-content: center; /* Centra orizzontalmente */
-        align-items: center; /* Centra verticalmente */
-        height: 100vh; /* Imposta l'altezza al 100% della viewport */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
       .logo_landing {
         max-width: 100%;
-        max-height: 80vh; /* Limita l'altezza massima dell'immagine per evitare overflow */
-        height: auto; /* Mantiene le proporzioni dell'immagine */
-        transition: opacity 0.5s; /* Transizione per l'opacità */
+        max-height: 80vh;
+        height: auto;
+        transition: opacity 0.5s;
       }
 
       @media only screen and (max-width: 600px) {
         .logo_landing {
-          width: 80%; /* Larghezza del 80% per adattarsi allo schermo */
-          max-width: 370px; /* Limita la larghezza massima */
-          height: auto; /* Mantiene le proporzioni dell'immagine */
-          object-fit: cover; /* Assicura che l'immagine riempia il contenitore */
-          position: relative;
-          right: -33px;
+          width: 80%;
+          max-width: 370px;
+          height: auto;
+          object-fit: cover;
         }
       }
 
-      /* Titolo di benvenuto */
       .welcome-title {
-        margin-top: 20px; /* Margine sopra il titolo */
-        text-align: center; /* Centra il testo */
-        font-weight: bold; /* Grassetto per il titolo */
-        color: inherit; /* Colore del testo ereditato */
-        transition: color 0.5s; /* Transizione per il colore */
-        font-family: "Poppins", sans-serif !important;
+        margin-top: 20px;
+        font-weight: bold;
+        color: inherit;
+        font-size: 2rem; /* Modifica dimensione del font */
       }
 
-      /* Bottone di toggle */
       .toggle-button {
-        background-color: transparent; /* Colore di sfondo trasparente */
-        border: none; /* Nessun bordo */
-        color: inherit; /* Colore del testo ereditato */
-        font-size: 1.5rem; /* Dimensione del testo */
-        cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
-        margin-top: 20px; /* Margine sopra il bottone */
-        display: flex; /* Utilizza flex per centrare le icone */
-        align-items: center; /* Allinea verticalmente le icone */
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
       }
 
       .icon {
-        margin-left: 10px; /* Margine a sinistra dell'icona */
+        margin-left: 10px;
       }
     </style>
   </head>
@@ -96,11 +93,20 @@
           data-aos="zoom-out-up"
           data-aos-duration="1000"
           class="logo_landing"
-          src="assets/new-landing.png"
+          src="./assets/logo_landing.png"
           alt="logo_landing"
         />
       </a>
-      <h4 class="welcome-title">Benvenuto in InSync Creations</h4>
+      <h4
+        class="welcome-title"
+        style="
+          background: linear-gradient(to right, #b261d7 0%, #5d3371 100%);
+          -webkit-background-clip: text;
+          color: transparent;
+        "
+      >
+        Benvenuto in InSync Creations
+      </h4>
       <!-- Titolo di benvenuto -->
       <button class="toggle-button" id="toggleButton">
         <i class="fas fa-sun icon" id="sunIcon"></i>
@@ -133,7 +139,7 @@
         } else {
           body.classList.add("light-mode");
           body.classList.remove("dark-mode");
-          logo.src = "assets/new-landing.png";
+          logo.src = "assets/logo_landing.png";
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
         }
@@ -154,7 +160,7 @@
           sunIcon.style.display = "none"; // Nasconde l'icona del sole
           moonIcon.style.display = "inline"; // Mostra l'icona della luna
         } else {
-          logo.src = "assets/new-landing.png";
+          logo.src = "assets/logo_landing.png";
           localStorage.setItem("mode", "light"); // Salva la modalità nel localStorage
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
