@@ -1,0 +1,12 @@
+# Questo file è stato creato per gestire l'accesso dei robot di ricerca
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /temp/
+
+# Consenti a tutti i motori di ricerca di indicizzare il sito
+Allow: /
+
+# Specifica il percorso alla sitemap
+Sitemap: https://insyncreations.it/sitemap.xml
