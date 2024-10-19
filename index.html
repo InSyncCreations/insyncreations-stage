@@ -111,7 +111,7 @@
           data-aos="zoom-out-up"
           data-aos-duration="1000"
           class="logo_landing"
-          src="./assets/logo_landing.png"
+          src="./assets/landingblack.png"
           alt="logo_landing"
         />
       </a>
@@ -151,13 +151,13 @@
         if (mode === "dark") {
           body.classList.add("dark-mode");
           body.classList.remove("light-mode");
-          logo.src = "./assets/logo_white.png";
+          logo.src = "./assets/landingwhite.png";
           sunIcon.style.display = "none"; // Nasconde l'icona del sole
           moonIcon.style.display = "inline"; // Mostra l'icona della luna
         } else {
           body.classList.add("light-mode");
           body.classList.remove("dark-mode");
-          logo.src = "assets/logo_landing.png";
+          logo.src = "assets/landingblack.png";
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
         }
@@ -173,12 +173,12 @@
 
         // Cambia l'immagine del logo e salva la modalità nel localStorage
         if (body.classList.contains("dark-mode")) {
-          logo.src = "./assets/logo_white.png";
+          logo.src = "./assets/landingwhite.png";
           localStorage.setItem("mode", "dark"); // Salva la modalità nel localStorage
           sunIcon.style.display = "none"; // Nasconde l'icona del sole
           moonIcon.style.display = "inline"; // Mostra l'icona della luna
         } else {
-          logo.src = "assets/logo_landing.png";
+          logo.src = "assets/landingblack.png";
           localStorage.setItem("mode", "light"); // Salva la modalità nel localStorage
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
