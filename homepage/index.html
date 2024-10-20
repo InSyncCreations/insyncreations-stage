@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+      <link rel="preload" href="../assets/hero.webp" as="image">
     <meta name="description" content="Insync Creations offre soluzioni digitali complete: design e sviluppo di siti web personalizzati e prodotti digitali innovativi. Realizziamo esperienze online uniche per far crescere il tuo business.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>InSync Creations</title>
@@ -288,7 +289,7 @@ body.dark-mode .btn-outline-secondary {
       <div class="container">
         <!-- Logo sulla sinistra -->
         <a class="navbar-brand" href="../homepage">
-          <img src="../assets/llwhite.png" alt="Logo-Insyncreations-white" class="logo" style="height: 80px; object-fit:fill" />
+          <img src="../assets/llwhite.webp" alt="Logo-Insyncreations-white" class="logo" style="height: 80px; object-fit:fill" />
         </a>
         
         <!-- Contenitore per il bottone del tema e l'hamburger menu -->
@@ -333,7 +334,7 @@ body.dark-mode .btn-outline-secondary {
       id="hero"
       class="d-flex align-items-center justify-content-center"
       style="
-        background: url('../assets/hero.png') no-repeat center center;
+        background: url('../assets/hero.webp') no-repeat center center;
         background-size: cover;
         height: 100vh;
       "
@@ -563,7 +564,7 @@ body.dark-mode .btn-outline-secondary {
       <!-- Colonna immagine e icone social -->
       <div class="col-12 col-md-5 text-center text-md-end">
         <img  data-aos="fade-up" data-aos-duration="1500"
-          src="../assets/simo.png"
+          src="../assets/simo.webp"
           class="img-fluid rounded-circle mb-3"
           alt="Simone Arena - insyncreations"
           style="max-width: 150px"
@@ -591,7 +592,7 @@ body.dark-mode .btn-outline-secondary {
       <!-- Colonna immagine e icone social -->
       <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0 ms-auto ">
         <img data-aos="fade-up " data-aos-duration="1500"
-          src="../assets/rr.png"
+          src="../assets/rr.webp"
           class="img-fluid rounded-circle mb-3"
           alt="Roberto Russo insyncreations cloud architect"
           style="max-width: 150px"
@@ -713,8 +714,8 @@ const sunIcon = toggleButton.querySelector('.bi-sun');
 const moonIcon = toggleButton.querySelector('.bi-moon');
 
 // Define the paths for the logo images
-const lightLogo = '../assets/llwhite.png';
-const darkLogo = '../assets/llblack.png';
+const lightLogo = '../assets/llwhite.webp';
+const darkLogo = '../assets/llblack.webp';
 
 // Define the sizes for the logo images
 const lightLogoSize = { height: '60px' };

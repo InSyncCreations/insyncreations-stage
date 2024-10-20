@@ -2,6 +2,8 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preload" href="./assets/landingblack.webp" as="image" />
+    <link rel="preload" href="./assets/landingwhite.webp" as="image" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -115,7 +117,7 @@
           data-aos="zoom-out-up"
           data-aos-duration="1000"
           class="logo_landing"
-          src="./assets/landingblack.png"
+          src="./assets/landingblack.webp"
           alt="logo_landing"
         />
       </a>
@@ -155,13 +157,13 @@
         if (mode === "dark") {
           body.classList.add("dark-mode");
           body.classList.remove("light-mode");
-          logo.src = "./assets/landingwhite.png";
+          logo.src = "./assets/landingwhite.webp";
           sunIcon.style.display = "none"; // Nasconde l'icona del sole
           moonIcon.style.display = "inline"; // Mostra l'icona della luna
         } else {
           body.classList.add("light-mode");
           body.classList.remove("dark-mode");
-          logo.src = "assets/landingblack.png";
+          logo.src = "assets/landingblack.webp";
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
         }
@@ -177,12 +179,12 @@
 
         // Cambia l'immagine del logo e salva la modalità nel localStorage
         if (body.classList.contains("dark-mode")) {
-          logo.src = "./assets/landingwhite.png";
+          logo.src = "./assets/landingwhite.webp";
           localStorage.setItem("mode", "dark"); // Salva la modalità nel localStorage
           sunIcon.style.display = "none"; // Nasconde l'icona del sole
           moonIcon.style.display = "inline"; // Mostra l'icona della luna
         } else {
-          logo.src = "assets/landingblack.png";
+          logo.src = "assets/landingblack.webp";
           localStorage.setItem("mode", "light"); // Salva la modalità nel localStorage
           sunIcon.style.display = "inline"; // Mostra l'icona del sole
           moonIcon.style.display = "none"; // Nasconde l'icona della luna
